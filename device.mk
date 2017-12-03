@@ -319,3 +319,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # GPS force mode
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.force.gps.mode=gnss
+	
+LOCAL_PATH := device/zte/v6/rootdir
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
