@@ -57,27 +57,6 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-# default.prop
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.secure=0 \
-    ro.allow.mock.location=1 \
-    ro.debuggable=1 \
-    ro.adb.secure=0 \
-    persist.service.acm.enable=0 \
-    persist.sys.usb.config=mtp \
-    ro.mount.fs=EXT4 \
-    camera.disable_zsl_mode=1 \
-    persist.sys.display.clearMotion=0 
-
-# build.prop
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.legacyencoder=true \
-    media.stagefright.less-secure=true \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
-    persist.sys.root_access=0 \
-    ro.sys.fw.bg_apps_limits=5
-
 # Log control prop
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ril.log=0 \
@@ -327,7 +306,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PerformanceControl \
     Stk
+# default.prop
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    ro.debuggable=1 \
+    ro.adb.secure=0 \
+    persist.service.acm.enable=0 \
+    persist.sys.usb.config=mtp \
+    ro.mount.fs=EXT4 \
+    camera.disable_zsl_mode=1 \
+    persist.sys.display.clearMotion=0 
 
+# build.prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.legacyencoder=true \
+    media.stagefright.less-secure=true \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.root_access=0 \
+    ro.sys.fw.bg_apps_limits=5
+	
 # GPS force mode
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.force.gps.mode=gnss
