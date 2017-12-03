@@ -28,7 +28,7 @@ $(call inherit-product-if-exists, vendor/zte/v6/v6-vendor.mk)
 
 # Device branding
 PRODUCT_DEVICE := v6
-PRODUCT_NAME := lineage_blade_v6
+PRODUCT_NAME := lineage_v6
 PRODUCT_BRAND := ZTE
 PRODUCT_MANUFACTURER := ZTE
 PRODUCT_MODEL := ZTE BLADE V6
